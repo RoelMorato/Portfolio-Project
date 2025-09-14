@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #ea580c;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px (mas predictable) */
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 60px 20%; /* gi-change: instead of 20px 0, gamit 5% para naay space left & right */
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-icon {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color);
+ font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease in ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+span {
+  background: linear-gradient(270deg, #DF8908, #ff1d15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* para makita ang gradient */
+}
+
+
+.navbar {
+  display: flex;
+  gap: 3rem; /* spacing sa links */
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn {
+    font-size: 2rem; /* text size mas dako */
+    padding: 2.1rem 4rem; /* mas dako ang background */
+    border-radius: 50px; /* rounded pill style */
+    background: linear-gradient(270deg, #DF8908, #ff1d15);
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+    text-wrap: nowrap;
+    font-weight: bold;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.08); /* mas gamay nga zoom effect */
+}
+section {
+    min-height: 100vh  ;
+    padding: 10rem 15%;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;      
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end ;
+    text-align: right;
+}
+.home-content h1 {
+    font-size: 80px; /* mas dako title */
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 5rem; /* subtitle mas klaro */
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.home-content p {
+    text-align: justify;
+    font-size: 2rem; /* mas readable */
+    font-weight: 00;
+    line-height: 1.8;
+    max-width: 600px; /* limit line length for readability */
+}
+
+.home-img img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+    margin-left: 5rem; /* dugangan space left side sa picture */
+}
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.social-icons {
+    display: flex;
+    justify-content: center; /* pwede nimo ilisan ug flex-end para moadto sa tuo */
+    align-items: center;
+    gap: 1.5rem; /* spacing sa mga icon */
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+    display: flex;          /* para center gyud ang icon sulod */
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group {
+    display: flex; 
+    gap: 1.5rem; /* spacing sa buttons */
+    margin-top: 3rem; /* 👈 dugang space para mu-ubos sila */
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+   box-shadow:0 0 25px var(--main-color) ;
+   border-radius: 3rem;
+   font-size: 1.8rem;
+   color: black;
+   font-weight: 600;
+   transition: 0.3s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow:0 0 25px var(--main-color),  
+               0 0 50px var(--main-color);
+}
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group a:nth-of-type(2):hover{
+    background-color: var(--main-color);
+    color: black;
+    box-shadow:0 0 25px var(--main-color);           
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+}
+.about-img img{
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.about-content h2{
+    font-size: 7rem;
+    text-align: left;
+}
+.about-content p{
+    font-size: 1.8rem;
+}
+.about-content .btn{
+    margin: 3rem 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px; /* nipis2 gamay */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second-bg-color); /* background sa track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color); /* orange effect */
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff4500; /* mas hayag kung i-hover */
+}
+
+.heading {
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 5rem;
+}
+
+.certificate {
+  background: var(--bg-color);
+}
+
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.certificate-box {
+  background: #ffffff; /* white box */
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.3);
+  color: #000000; /* black text */
+}
+
+
+.certificate-box img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.certificate-box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px var(--main-color);
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 0;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #2563eb;
+  font-size: 0.9rem;
+  margin: 0.25rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+}
+
+
+/* Contact Section */
+.contact form {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact .input-box input,
+.contact textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background: var(--second-bg-color);
+  border-radius: 1rem;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.3);
+}
+
+.contact textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+.contact .btn {
+  margin-top: 2rem;
+}
+
