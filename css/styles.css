@@ -569,6 +569,12 @@ body.loaded {
     padding: 2rem 3%;
   }
   
+  .logo {
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 2.5rem;
+  }
+  
   #menu-icon {
     display: block;
   }
