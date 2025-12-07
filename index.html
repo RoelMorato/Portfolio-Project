@@ -24,8 +24,7 @@
         <nav class="navbar" role="navigation">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
             <a href="#certificate">Certificate</a>
             <a href="#project">Project</a>
             <a href="#contact">Contact</a>
@@ -50,98 +49,144 @@
   </div>
 </section>
 <section class="about" id="about">
-
-    <div class="about-img">
-      <img src="Image/profile1.png" alt="Roel Morato">
-    </div>
-
-    <div class="about-content">
-        <h2>About  <span></span></h2>
-        <p>"I am a dedicated web developer with a passion for creating dynamic and responsive websites. My expertise lies in HTML, CSS, and JavaScript, and I am constantly exploring new technologies to enhance my skill set. I believe in the power of collaboration and am always eager to learn from others in the field."</p>
-        <div class="btn-group">
+    <div class="about-content-full">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p class="about-text">"I am a dedicated web developer with a passion for creating dynamic and responsive websites. My expertise lies in HTML, CSS, and JavaScript, and I am constantly exploring new technologies to enhance my skill set. I believe in the power of collaboration and am always eager to learn from others in the field."</p>
+        
+        <div class="btn-group about-btns">
             <a href="resume/ROEL C. Morato._APPLICATION LETTER & RESUME.pdf" class="btn" target="_blank">View Resume</a>
             <a href="resume/ROEL C. Morato._APPLICATION LETTER & RESUME.pdf" class="btn" download>Download Resume</a>
+        </div>
+
+        <!-- Education inside About -->
+        <h3 class="sub-heading">My <span>Education</span></h3>
+        <div class="education-container">
+          <div class="education-box">
+            <div class="education-content">
+              <div class="year"><i class='bx bxs-calendar'></i> 2022 - 2026</div>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p>University of Mindanao Digos College</p>
+            </div>
+          </div>
+          
+          <div class="education-box">
+            <div class="education-content">
+              <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2021</div>
+              <h3>Senior High School - ICT Strand</h3>
+              <p>Mary Mediatrix of All Grace Academy</p>
+            </div>
+          </div>
+          
+          <div class="education-box">
+            <div class="education-content">
+              <div class="year"><i class='bx bxs-calendar'></i> 2016 - 2019</div>
+              <h3>Junior High School</h3>
+              <p>Lapulabao National High School</p>
+            </div>
+          </div>
+          
+          <div class="education-box">
+            <div class="education-content">
+              <div class="year"><i class='bx bxs-calendar'></i> 2010 - 2016</div>
+              <h3>Elementary</h3>
+              <p>Lapulabao Elementary School</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills inside About -->
+        <h3 class="sub-heading">Technical <span>Skills</span></h3>
+        
+        <!-- Front-End Development -->
+        <div class="skill-category">
+          <h4 class="skill-category-title"><i class='bx bx-code-alt'></i> Front-End Development</h4>
+          <div class="skills-container">
+            <div class="skill-box">
+              <i class='bx bxl-html5'></i>
+              <h3>HTML5</h3>
+              <p>Proficient in semantic markup</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bxl-css3'></i>
+              <h3>CSS3</h3>
+              <p>Responsive design expertise</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bxl-javascript'></i>
+              <h3>JavaScript</h3>
+              <p>Interactive web applications</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bxl-bootstrap'></i>
+              <h3>Bootstrap</h3>
+              <p>Rapid UI development</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bx-palette'></i>
+              <h3>UI/UX</h3>
+              <p>Best practices knowledge</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back-End Development -->
+        <div class="skill-category">
+          <h4 class="skill-category-title"><i class='bx bx-server'></i> Back-End Development</h4>
+          <div class="skills-container">
+            <div class="skill-box">
+              <i class='bx bxl-php'></i>
+              <h3>PHP</h3>
+              <p>Server-side development</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bx-data'></i>
+              <h3>MySQL</h3>
+              <p>Database management</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bx-sitemap'></i>
+              <h3>Web Architecture</h3>
+              <p>Application structure</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Development -->
+        <div class="skill-category">
+          <h4 class="skill-category-title"><i class='bx bx-mobile-alt'></i> Mobile Development</h4>
+          <div class="skills-container">
+            <div class="skill-box">
+              <i class='bx bxl-android'></i>
+              <h3>Android Studio</h3>
+              <p>Mobile app development</p>
+            </div>
+            <div class="skill-box">
+              <i class='bx bxl-kotlin'></i>
+              <h3>Kotlin</h3>
+              <p>Android programming</p>
+            </div>
+
+          </div>
         </div>
     </div>
 </section>
 
-<!-- Education Section -->
-<section class="education" id="education">
-  <h2 class="heading">My <span>Education</span></h2>
-  <div class="education-container">
-    <div class="education-box">
-      <div class="education-content">
-        <div class="year"><i class='bx bxs-calendar'></i> 2022 - 2026</div>
-        <h3>Bachelor of Science in Information Technology</h3>
-        <p>University of Mindanao Digos College</p>
+<!-- Experience Section -->
+<section class="experience" id="experience">
+  <h2 class="heading">My <span>Experience</span></h2>
+  <div class="experience-container">
+    <div class="experience-box">
+      <div class="experience-content">
+        <div class="year"><i class='bx bxs-calendar'></i> January - June 2026</div>
+        <h3>IT Intern</h3>
+        <p class="company"><i class='bx bxs-buildings'></i> [Company Name]</p>
+        <ul class="experience-list">
+          <li>Assisted in developing and maintaining web applications</li>
+          <li>Collaborated with the development team on various projects</li>
+          <li>Gained hands-on experience in HTML, CSS, JavaScript, and PHP</li>
+          <li>Participated in troubleshooting and technical support tasks</li>
+        </ul>
       </div>
-    </div>
-    
-    <div class="education-box">
-      <div class="education-content">
-        <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2021</div>
-        <h3>Senior High School - ICT Strand</h3>
-        <p>Mary Mediatrix of All Grace Academy</p>
-      </div>
-    </div>
-    
-    <div class="education-box">
-      <div class="education-content">
-        <div class="year"><i class='bx bxs-calendar'></i> 2016 - 2019</div>
-        <h3>Junior High School</h3>
-        <p>Lapulabao National High School</p>
-      </div>
-    </div>
-    
-    <div class="education-box">
-      <div class="education-content">
-        <div class="year"><i class='bx bxs-calendar'></i> 2010 - 2016</div>
-        <h3>Elementary</h3>
-        <p>Lapulabao Elementary School</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section class="skills" id="skills">
-  <h2 class="heading">My <span>Skills</span></h2>
-  <div class="skills-container">
-    <div class="skill-box">
-      <i class='bx bxl-html5'></i>
-      <h3>HTML5</h3>
-      <p>Semantic markup and modern web standards</p>
-    </div>
-    <div class="skill-box">
-      <i class='bx bxl-css3'></i>
-      <h3>CSS3</h3>
-      <p>Responsive design and animations</p>
-    </div>
-    <div class="skill-box">
-      <i class='bx bxl-javascript'></i>
-      <h3>JavaScript</h3>
-      <p>Interactive web applications</p>
-    </div>
-    <div class="skill-box">
-      <i class='bx bxl-php'></i>
-      <h3>PHP</h3>
-      <p>Server-side development</p>
-    </div>
-    <div class="skill-box">
-      <i class='bx bx-data'></i>
-      <h3>MySQL</h3>
-      <p>Database design and management</p>
-    </div>
-    <div class="skill-box">
-      <i class='bx bxl-bootstrap'></i>
-      <h3>Bootstrap</h3>
-      <p>Rapid UI development</p>
-    </div>
-    
-    <div class="skill-box">
-      <i class='bx bxl-flutter'></i>
-      <h3>Flutter</h3>
-      <p>Mobile app development</p>
     </div>
   </div>
 </section>
@@ -149,28 +194,31 @@
 <!-- Certificate Section -->
 <section class="certificate" id="certificate">
   <h2 class="heading">My <span>Certificates</span></h2>
+  
+  <!-- Coursebank Certificates -->
+  <h3 class="cert-category-title">Coursebank</h3>
   <div class="certificate-container">
     <div class="certificate-box">
-      <img src="Image/CiscoCyberTheatManagement.png" alt="Cisco Cyber Threat Management Certificate">
-      <h3>Cyber Threat Management</h3>
-      <p>Cisco</p>
+      <img src="Image/course bank designing.png" alt="Coursebank Designing Certificate">
+      <h3>Designing</h3>
+      <p>Coursebank</p>
     </div>
     <div class="certificate-box">
-      <img src="Image/CiscoIntroductionToCybersecurity.png" alt="Cisco Introduction To Cybersecurity Certificate">
-      <h3>Introduction To Cybersecurity</h3>
-      <p>Cisco</p>
+      <img src="Image/course bank microsoft.png" alt="Coursebank Microsoft Certificate">
+      <h3>Microsoft</h3>
+      <p>Coursebank</p>
     </div>
     <div class="certificate-box">
-      <img src="Image/CiscoNetworkDefense.png" alt="Cisco Network Defense Certificate">
-      <h3>Network Defense</h3>
-      <p>Cisco</p>
+      <img src="Image/course bank navigating.png" alt="Coursebank Navigating Certificate">
+      <h3>Navigating</h3>
+      <p>Coursebank</p>
     </div>
-     <div class="certificate-box">
-      <img src="Image/freecodecamp.png" alt="FreeCodeCamp Responsive Web Design Certificate">
-      <h3>Responsive Web Design</h3>
-      <p>FreeCodeCamp</p>
-    </div>
-     <div class="certificate-box">
+  </div>
+
+  <!-- TESDA Certificates -->
+  <h3 class="cert-category-title">TESDA</h3>
+  <div class="certificate-container">
+    <div class="certificate-box">
       <img src="Image/CSS.png" alt="TESDA CSS Certificate">
       <h3>CSS</h3>
       <p>TESDA</p>
@@ -194,6 +242,36 @@
       <img src="Image/Installing&ConfiguringComputerSystems.png" alt="TESDA Installing and Configuring Computer Systems Certificate">
       <h3>Installing and Configuring Computer Systems</h3>
       <p>TESDA</p>
+    </div>
+  </div>
+
+  <!-- Cisco Certificates -->
+  <h3 class="cert-category-title">Cisco</h3>
+  <div class="certificate-container">
+    <div class="certificate-box">
+      <img src="Image/CiscoCyberTheatManagement.png" alt="Cisco Cyber Threat Management Certificate">
+      <h3>Cyber Threat Management</h3>
+      <p>Cisco</p>
+    </div>
+    <div class="certificate-box">
+      <img src="Image/CiscoIntroductionToCybersecurity.png" alt="Cisco Introduction To Cybersecurity Certificate">
+      <h3>Introduction To Cybersecurity</h3>
+      <p>Cisco</p>
+    </div>
+    <div class="certificate-box">
+      <img src="Image/CiscoNetworkDefense.png" alt="Cisco Network Defense Certificate">
+      <h3>Network Defense</h3>
+      <p>Cisco</p>
+    </div>
+  </div>
+
+  <!-- FreeCodeCamp Certificates -->
+  <h3 class="cert-category-title">FreeCodeCamp</h3>
+  <div class="certificate-container">
+    <div class="certificate-box">
+      <img src="Image/freecodecamp.png" alt="FreeCodeCamp Responsive Web Design Certificate">
+      <h3>Responsive Web Design</h3>
+      <p>FreeCodeCamp</p>
     </div>
   </div>
 </section>
@@ -250,18 +328,33 @@
 <!-- Contact Section -->
 <section class="contact" id="contact">
   <h2 class="heading">Contact <span>Me</span></h2>
-  <form action="#" id="contact-form">
-    <div class="input-box">
-      <input type="text" name="name" placeholder="Full Name" required minlength="2">
-      <input type="email" name="email" placeholder="Email Address" required>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class='bx bxs-envelope'></i>
+        <div>
+          <h3>Email</h3>
+          <a href="mailto:roelmorato@gmail.com">roelmorato@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class='bx bxs-phone'></i>
+        <div>
+          <h3>Phone</h3>
+          <a href="tel:+639912884349">09912884349</a>
+        </div>
+      </div>
     </div>
-    <div class="input-box">
-      <input type="tel" name="phone" placeholder="Mobile Number" required pattern="[0-9]{10,}">
-      <input type="text" name="subject" placeholder="Subject" required minlength="3">
+    <div class="contact-social">
+      <h3>Connect with me</h3>
+      <div class="social-icons">
+        <a href="https://x.com/summoning_wata" target="_blank" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/moratoroel/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/roel-morato-07b403393/" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/RoelMorato" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+      </div>
     </div>
-    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required minlength="10"></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
+  </div>
 </section>
 
 

@@ -144,11 +144,13 @@ section {
 }
 
 .home-img img{
-    width: 32vw;
+    width: 100%;
+    max-width: 400px;
+    min-width: 250px;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
-    margin-left: 5rem; /* dugangan space left side sa picture */
+    margin-left: 5rem;
 }
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
@@ -217,31 +219,52 @@ section {
 }
 .about{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
     background: var(--second-bg-color);
 }
-.about-img img{
-    width: 30vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    transition: 0.4s ease-in-out;
+
+.about-content-full {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
 }
-.about-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
-}
-.about-content h2{
-    font-size: 7rem;
-    text-align: left;
-}
-.about-content p{
+
+.about-text {
     font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: justify;
 }
-.about-content .btn{
-    margin: 3rem 0;
+
+.about-btns {
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.sub-heading {
+    font-size: 4rem;
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+
+.skill-category {
+  margin-bottom: 4rem;
+}
+
+.skill-category-title {
+  font-size: 2.4rem;
+  color: var(--main-color);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-category-title i {
+  font-size: 3rem;
 }
 
 /* Scrollbar Styling */
@@ -276,8 +299,9 @@ section {
 
 .certificate-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
   gap: 3rem;
+  justify-content: center;
 }
 
 .certificate-box {
@@ -317,6 +341,17 @@ section {
 .certificate-box:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 0 30px var(--main-color);
+}
+
+.cert-category-title {
+  font-size: 2.8rem;
+  color: var(--main-color);
+  text-align: center;
+  margin: 4rem 0 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--main-color);
+  display: inline-block;
+  width: 100%;
 }
 
 /* Projects Section */
@@ -378,17 +413,82 @@ section {
 }
 
 
-/* Education Section */
-.education {
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Experience Section */
+.experience {
   background: var(--bg-color);
 }
 
-.education-container {
+.experience-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.experience-box {
+  background: var(--second-bg-color);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  border-left: 5px solid var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.experience-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.experience-content .year {
+  font-size: 1.6rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.experience-content .company {
+  font-size: 1.6rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-list li {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.experience-list li::before {
+  content: '▹';
+  color: var(--main-color);
+  position: absolute;
+  left: 0;
 }
 
 .education-box {
@@ -427,11 +527,6 @@ section {
 .education-content p {
   font-size: 1.6rem;
   color: #999;
-}
-
-/* Skills Section */
-.skills {
-  background: var(--second-bg-color);
 }
 
 .skills-container {
@@ -473,47 +568,68 @@ section {
 }
 
 /* Contact Section */
-.contact form {
-  max-width: 700px;
-  margin: auto;
+.contact {
+  background: var(--second-bg-color);
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.contact .input-box {
+.contact-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5rem;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  background: var(--bg-color);
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.contact .input-box input,
-.contact textarea {
-  width: 100%;
-  padding: 1.5rem;
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.contact-item i {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+
+.contact-item h3 {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-item a {
   font-size: 1.6rem;
-  background: var(--second-bg-color);
-  border-radius: 1rem;
   color: var(--text-color);
-  border: 2px solid transparent;
-  outline: none;
-  box-shadow: 0 0 10px rgba(234, 88, 12, 0.3);
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
-.contact .input-box input:focus,
-.contact textarea:focus {
-  border: 2px solid var(--main-color);
-  box-shadow: 0 0 15px rgba(234, 88, 12, 0.5);
+.contact-item a:hover {
+  color: var(--main-color);
 }
 
-.contact textarea {
-  resize: none;
-  min-height: 200px;
+.contact-social h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
 }
 
-.contact .btn {
-  margin-top: 2rem;
+.contact-social .social-icons {
+  justify-content: center;
 }
 /* ========== Scroll Reveal Animations ========== */
 .home-content,

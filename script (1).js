@@ -65,49 +65,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// ========== Contact Form Validation & Submit ==========
-const form = document.querySelector('#contact-form');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  // Get form values
-  const name = form.querySelector('input[name="name"]').value.trim();
-  const email = form.querySelector('input[name="email"]').value.trim();
-  const phone = form.querySelector('input[name="phone"]').value.trim();
-  const message = form.querySelector('textarea[name="message"]').value.trim();
-  
-  // Basic validation
-  if (name.length < 2) {
-    alert('Please enter a valid name (at least 2 characters)');
-    return;
-  }
-  
-  if (!isValidEmail(email)) {
-    alert('Please enter a valid email address');
-    return;
-  }
-  
-  if (phone.length < 10) {
-    alert('Please enter a valid phone number (at least 10 digits)');
-    return;
-  }
-  
-  if (message.length < 10) {
-    alert('Please enter a message (at least 10 characters)');
-    return;
-  }
-  
-  // Success message
-  alert('Thank you! Your message has been sent ✅');
-  form.reset();
-});
-
-// Email validation helper
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
 
 // ========== Custom Smooth Scroll ==========
 function smoothScroll(target, duration) {
